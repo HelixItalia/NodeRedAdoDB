@@ -1,0 +1,26 @@
+{
+    "name": "@helix_italia/node-red-helix-adodb",
+    "version": "0.0.1",
+    "node-red":
+    {
+        "version": ">=0.0.1",
+		"nodes": {
+			"hxadodb": "hxadodb.js"
+		}
+    },
+    "keywords": [
+        "node-red",
+        "adodb",
+        "helix",
+        "MsAccess",
+        "database"
+    ],
+    "author": {
+        "name": "Helix S.r.l.",
+        "email": "info@helix.it",
+        "url": "https://www.helix.it"
+    },
+    "dependencies": {
+        "node-adodb": "^5.0.3"
+    }
+}

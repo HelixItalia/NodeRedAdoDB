@@ -1,0 +1,43 @@
+<script type="text/javascript">
+    RED.nodes.registerType('hx-adodb-connect',{
+		category: 'Helix',
+		paletteLabel:'pippo',
+        color: '#a6bbcf',
+        defaults: {
+            provider: {value:"Microsoft.Jet.OLEDB.4.0", required:false},
+            source: {value:"", required:false},
+			query:{value:"", required:false}
+        },
+        inputs:3,
+        outputs:1,
+		inputLabels: ["stdout","stderr","rc"],
+		outputLabels: ["Risultato"],
+        icon: "leveldb.png",
+        paletteLabel:"AdoDB",
+        label: function() {
+            return this.name||"AdoDB";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="hx-adodb-connect">
+
+	<div class="form-row">
+		<label for="node-input-provider">Provider</label>
+		<input type="text" id="node-input-provider" type="str" placeholder="provider">
+	</div>
+  
+    <div class="form-row">
+		<label for="node-input-source"><i class="icon-tasks">Data Source</i></label>
+		<input type="text" id="node-input-source" placeholder="source">
+    </div>
+	
+	 <div class="form-row">
+		<label for="node-input-query"><i class="icon-tasks">Query</i></label>
+		<input type="text" id="node-input-query" placeholder="query">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="hx-adodb-connect">
+    <p>Helix AdoDB connector</p>
+</script>
